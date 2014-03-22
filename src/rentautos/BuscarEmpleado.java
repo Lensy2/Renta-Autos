@@ -28,7 +28,10 @@ public class BuscarEmpleado extends javax.swing.JDialog {
         super(parent, modal);
 
         initComponents();
-
+/** Bienvenidos
+ * Ahora a trabajar
+ * ahiguita
+ * */
     }
 
     /**
