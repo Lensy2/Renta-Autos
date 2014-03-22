@@ -20,7 +20,7 @@ public class BuscarEmpleado extends javax.swing.JDialog {
 
     DefaultTableModel dfm = new DefaultTableModel();
     String url = "jdbc:odbc:RentAutos";
-
+/** hola brujos el lunes en mi casa 9 am, por favor puntal y dinero para el almuerzo */
     /**
      * Creates new form BuscarEmpleado
      */
