@@ -29,7 +29,7 @@ public class BuscarEmpleado extends javax.swing.JDialog {
 
         initComponents();
 /** Bienvenidos
- * Ahora a trabajar
+ * Ahora a trabajar en git
  * ahiguita
  * */
     }
