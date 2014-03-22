@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 // prueba pull request
-
+/**Porfa decicdan de una vez que van a almorzar y de cuanto es la cuota mas o  menos */
 /**
  *
  * @author LuisaM
