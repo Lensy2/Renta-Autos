@@ -99,7 +99,7 @@ public class JdAlquiler extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(0), "Alquiler", 2, 1, new java.awt.Font("Century Gothic", 1, 18), new java.awt.Color(56, 9, 140))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Alquiler", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Century Gothic", 1, 18), new java.awt.Color(56, 9, 140))); // NOI18N
 
         jToolBar1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jToolBar1.setRollover(true);
@@ -172,7 +172,7 @@ public class JdAlquiler extends javax.swing.JDialog {
         });
         jToolBar1.add(bthSalir);
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(0), "Cliente", 0, 0, new java.awt.Font("Century Gothic", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Cliente", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
 
         btRegistrarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Nuevo_Cli.png"))); // NOI18N
         btRegistrarCliente.setText("Nuevo");
@@ -295,7 +295,7 @@ public class JdAlquiler extends javax.swing.JDialog {
                             .addComponent(txtCodSeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setText("Codigo");
 
@@ -372,7 +372,7 @@ public class JdAlquiler extends javax.swing.JDialog {
                     .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Conductor", 1, 0, new java.awt.Font("Century Gothic", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Conductor", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Nuevo_Cli.png"))); // NOI18N
         jButton5.setText("Nuevo");
@@ -413,7 +413,7 @@ public class JdAlquiler extends javax.swing.JDialog {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Categoria" }));
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         cbTipoAuto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione Tipo de  Auto", "Deportivo", "Camion", "Buseta" }));
 
@@ -505,12 +505,13 @@ public class JdAlquiler extends javax.swing.JDialog {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPlaca)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel18)
-                                .addComponent(txtCantidadDias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtCantidadDias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblPlaca)))
                         .addGap(15, 15, 15)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
@@ -675,17 +676,17 @@ public class JdAlquiler extends javax.swing.JDialog {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try {
             Connection conect = DriverManager.getConnection(url, "sa", "93102908528");
-
+//que es ese error oks bruja
 
             PreparedStatement pst = conect.prepareStatement("{call RegistrarAlquiler (?,?,?,?,?,?,?,?,?,?,?,?)}");
             pst.setInt(1, Integer.parseInt(this.txtCodigoAlquiler.getText()));
             pst.setInt(2, Integer.parseInt(this.TxtTotal.getText()));
             pst.setInt(3, Integer.parseInt(this.txtCedula.getText()));
-            pst.setInt(4, Integer.parseInt(this.txtCodEmpleado.getText()));
+//            pst.setInt(4, Integer.parseInt(this.txtCodEmpleado.getText()));
             pst.setString(5, new Date(this.jdateFechaReco.getCalendar().getTime().getTime()).toString());
             pst.setString(6, new Date(this.jdateFechaDevo.getCalendar().getTime().getTime()).toString());
 
-            pst.setInt(7, Integer.parseInt(this.txtTotal.getText()));
+          //  pst.setInt(7, Integer.parseInt(this.txtTotal.getText()));
             int con = 1;
             pst.setInt(8, con);
             //pst.setInt(8, Integer.((JRadioButton) this.buttonGroup1.getSelection()).getText());
